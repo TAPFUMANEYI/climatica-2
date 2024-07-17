@@ -11,8 +11,8 @@ const App = () => {
 
   const fetchWeather = async (query) => {
     try {
-      const apiKey = 'YOUR_API_KEY';
-      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${apiKey}`);
+      // const apiKey = 'YOUR_API_KEY';
+      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=bbb85b4e8cd4964a8eb820a9399fbf2d`);
       setWeatherData(response.data);
       setCoords([response.data.coord.lat, response.data.coord.lon]);
     } catch (error) {
