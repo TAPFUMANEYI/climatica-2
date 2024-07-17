@@ -14,6 +14,17 @@ const Map = ({ coords }) => {
       {/* TileLayer specifies the map tiles and attribution */}
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" // URL for OpenStreetMap tiles
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' 
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">
+        OpenStreetMap
+        </a> contributors' 
       />
-      
+      <Marker position={coords}>
+        {/* Popup displays a message when the marker is clicked */}
+        <Popup>Weather Location
+        </Popup>
+      </Marker>
+    </MapContainer>
+  );
+};
+
+export default Map;
