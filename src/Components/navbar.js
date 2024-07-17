@@ -10,3 +10,7 @@ const Navbar = ({ onSearch }) => {
     e.preventDefault(); // Preventing the default form submission behavior
     onSearch(query); //to Call the onSearch function with the current query
   };
+  return (
+    // Nav element styled with inline CSS
+    <nav style={{ backgroundColor: 'skyblue', padding: '1rem', display: 'flex', justifyContent: 'space-between' }}>
+      <div>Climatica</div> 
