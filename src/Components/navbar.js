@@ -14,3 +14,17 @@ const Navbar = ({ onSearch }) => {
     // Nav element styled with inline CSS
     <nav style={{ backgroundColor: 'skyblue', padding: '1rem', display: 'flex', justifyContent: 'space-between' }}>
       <div>Climatica</div> 
+      <form onSubmit={handleSearch}>
+        <input
+          type="text"
+          placeholder="Enter city, address, or zip code"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)} // Update the query state when the input value changes
+        />
+        <button type="submit">Search</button>
+      </form>
+    </nav>
+  );
+};
+
+export default Navbar;
