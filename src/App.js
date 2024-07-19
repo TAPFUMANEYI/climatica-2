@@ -12,5 +12,12 @@ function App() {
     const apiKey = 'c122238fca5f537a0713f26936b03a93'; 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     //will come back and input my actual url
+	//When fetch is successful should be coverted to JSON ok so now results will be passed to call back function
+  fetch(url) 
+	.then((response) => response.json()) 
+	.then((data) => { 
+  // Extracting the 'temp' and "feels-like" field from 'main' in the data object. This represents the current temperature
+	  let MT = Math.round(data.main.temp);
+	  let FL = Math.round(data.main.feels_like);
+	
   
-
