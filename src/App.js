@@ -44,5 +44,5 @@ return (
 			type='text'
 			placeholder='Enter city name'
 			value={city}
-			onChange={(e) => setCity(e.target.value)}
+			onChange={(e) => setCity(e.target.value)}// updating the city state variable with the current value of the input field. 
 		/>
