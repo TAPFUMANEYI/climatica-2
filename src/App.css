@@ -1,11 +1,11 @@
 .App {
 	text-align: center;
-	/* background-image:url */
+	
 }
 
 body {
 	font-size: 22px;
-	background-image: url(../src/Images/darling-8346954_1280.jpg);
+	background-image:url(../src/Images/moutains-8445767_1280.jpg)
 }
 
 .weather-container {
