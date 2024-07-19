@@ -31,3 +31,9 @@ function App() {
 
 	setWeatherInfo(weather);
 })
+
+// catches any errors that might happen during the network request or the processing of the response
+.catch((error) => {
+	console.error(error);
+});
+}
