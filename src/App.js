@@ -37,3 +37,12 @@ function App() {
 	console.error(error);
 });
 }
+
+return (
+	<div className='weather-container'>
+		<input
+			type='text'
+			placeholder='Enter city name'
+			value={city}
+			onChange={(e) => setCity(e.target.value)}
+		/>
