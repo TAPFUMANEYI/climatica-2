@@ -1,4 +1,5 @@
 import { useState } from 'react'; 
+// import darling from "../images/darling-8346954_1280.jpg"
 import './App.css'; 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
   // Extracting the 'temp' and "feels-like" field from 'main' in the data object. This represents the current temperature
 	  let MT = Math.round(data.main.temp);
 	  let FL = Math.round(data.main.feels_like);
-	
+	//   <img src={darling} alt="values images" />
 	  const weather = {
 		location: `Weather in ${data.name}`,
 		temperature: `Temperature: ${MT} C`,
@@ -46,3 +47,19 @@ return (
 			value={city}
 			onChange={(e) => setCity(e.target.value)}// updating the city state variable with the current value of the input field. 
 		/>
+		<button onClick={getWeather}>Get Weather</button>
+			{weatherInfo && (
+				<div className='weather-info'>
+					<h3>{weatherInfo.location}</h3>
+					<p>{weatherInfo.temperature}</p>
+					<p>{weatherInfo.feelsLike}</p>
+					<p>{weatherInfo.humidity}</p>
+					<p>{weatherInfo.wind}</p>
+					<p>{weatherInfo.condition}</p>
+				</div>
+			)}
+		</div>
+	);
+}
+
+export default App;
